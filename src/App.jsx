@@ -10,7 +10,7 @@ function App() {
     adress: "",
   });
 
-  const handleChange = (e) => {
+  const handlePersonalDetailsChange = (e) => {
     setPersonalDetails({ ...personalDetails, [e.target.id]: e.target.value });
   };
 
@@ -21,7 +21,7 @@ function App() {
       <h1>CV Builder</h1>
       <PersonalDetailsForm
         personalDetails={personalDetails}
-        handleChange={handleChange}
+        handleChange={handlePersonalDetailsChange}
       />
     </div>
   );

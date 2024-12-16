@@ -1,5 +1,3 @@
-import "../styles/FormItem.css";
-
 function FormItem({ htmlFor, label, value, onChange }) {
   return (
     <div className="form-item">
