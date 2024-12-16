@@ -5,49 +5,125 @@
   margin: 0;
   box-sizing: border-box;
   color: black;
+  font-family: inherit;
 }
 
-body {
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: whitesmoke;
   font-family: "Open Sans", sans-serif;
 }
 
-.personal-details-form {
+.section {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  margin: 20px;
   padding: 10px 40px;
-  gap: 25px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  min-width: 200px;
+  background-color: white;
+  height: fit-content;
 }
 
-.form-item {
+.section-title {
+  font-weight: 900;
+}
+
+.section-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
+  gap: 8px;
 }
 
-.form-item label {
+.section-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+}
+
+.section-item:last-child {
+  margin-bottom: 20px;
+}
+.section-item label {
   font-weight: 600;
 }
 
-.form-item input {
+.section-item input {
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: #eeeeee;
-  max-width: 200px;
-  padding: 10px 15px;
+  padding: 10px;
+  width: 100%;
 }
 
-.form-item input:focus {
+.section-item input:focus {
   outline: 1px solid #025bff;
-  box-shadow: 0 0 50px 0 #025bff65;
+  box-shadow: 0 0 50px 0 #025bff33;
 }
 
 .section-btn {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  padding: 15px 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
+  width: 100%;
+}
+
+.caret-icon {
+  margin-left: auto;
+}
+
+.education-item {
+  cursor: pointer;
+  border: none;
+  background-color: rgb(236, 236, 236);
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.special-btn {
+  margin: 15px 15px 20px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 30px;
+}
+#cancel-edit-education-btn {
+  background-color: crimson;
+}
+#add-education-btn {
+  background-color: black;
+}
+
+#add-educ-btn {
+  background-color: #025bff;
+}
+#cancel-add-educ-btn {
+  background-color: crimson;
+}
+
+.education-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }

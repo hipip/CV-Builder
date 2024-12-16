@@ -1,49 +1,64 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import FormItem from "./FormItem";
+import SectionItem from "./SectionItem";
 import { useState } from "react";
-import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCaretUp,
+  faCaretDown,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 
-export default function PersonalDetailsForm({ personalDetails, handleChange }) {
-  const [isOpen, setIsOpen] = useState(true);
+export default function PersonalDetailsSection({
+  personalDetails,
+  handleChange,
+}) {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleIsOpen = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <section>
+    <section id="personal-details-section" className="section">
       <button className="section-btn" onClick={toggleIsOpen}>
-        <h2>Personal Details</h2>
-        <FontAwesomeIcon icon={isOpen ? faCaretUp : faCaretDown} />
+        <FontAwesomeIcon icon={faUser} />
+        <h2 className="section-title">Personal Details</h2>
+        <FontAwesomeIcon
+          icon={isOpen ? faCaretUp : faCaretDown}
+          className="caret-icon"
+        />
       </button>
       {isOpen && (
-        <>
-          <FormItem
+        <div className="section-items">
+          <SectionItem
             htmlFor="fullName"
             label="Full Name"
+            placeHolder="Enter first & last name"
             value={personalDetails.fullName}
             onChange={handleChange}
           />
 
-          <FormItem
+          <SectionItem
             htmlFor="email"
             label="Email"
+            placeHolder="Enter mail"
             value={personalDetails.email}
             onChange={handleChange}
           />
-          <FormItem
+          <SectionItem
             htmlFor="phoneNumber"
             label="Phone Number"
+            placeHolder="Enter phone number"
             value={personalDetails.phoneNumber}
             onChange={handleChange}
           />
-          <FormItem
+          <SectionItem
             htmlFor="address"
             label="Address"
+            placeHolder="Enter address"
             value={personalDetails.address}
             onChange={handleChange}
           />
-        </>
+        </div>
       )}
     </section>
   );
