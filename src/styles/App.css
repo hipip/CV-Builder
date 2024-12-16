@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: black;
+
   font-family: inherit;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
 }
 
 button {
@@ -15,15 +24,15 @@ button {
 }
 
 #root {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: whitesmoke;
+  margin: 30px;
   font-family: "Open Sans", sans-serif;
 }
 
 .main-title {
+  text-align: center;
   font-size: 2.5rem;
   font-weight: 900;
+  margin: 10px 0 0 20px;
 }
 
 .section {
@@ -146,4 +155,61 @@ button {
 
 .section-icon {
   font-size: 1.5rem;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 40px;
+}
+
+.sections-container {
+  flex: 1 1 auto;
+  max-width: 500px;
+}
+
+#resume {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  overflow: hidden;
+  width: 21cm;
+  height: 29.7cm;
+}
+
+.resume-personal-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: #320053;
+  color: white;
+}
+
+.resume-personal-details h3 {
+  color: white;
+}
+
+#fullname {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 3rem;
+}
+.personal-details-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.another-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
