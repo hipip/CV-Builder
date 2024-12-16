@@ -1,0 +1,31 @@
+.personal-details-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px;
+  gap: 25px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.form-item label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.form-item input {
+  border: none;
+  border-radius: 20px;
+  background-color: #eeeeee;
+  max-width: 200px;
+  padding: 10px 15px;
+}
+
+.form-item input:focus {
+  outline: 1px solid #025bff;
+  box-shadow: 0 0 50px 0 #025bff65;
+}
