@@ -126,7 +126,8 @@ button {
   background-color: #025bff;
 }
 #cancel-add-educ-btn,
-#cancel-add-experience-btn {
+#cancel-add-experience-btn,
+#return-to-education-btn {
   background-color: crimson;
 }
 

@@ -1,10 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-export default function ExperienceItem({ exp, id, deleteExperienceFunc }) {
+export default function ExperienceItem({
+  exp,
+  id,
+  onClick,
+  deleteExperienceFunc,
+}) {
   return (
     <button className="experience-item" id={id}>
-      <h3>{exp.companyName}</h3>
+      <h3 onClick={onClick}>{exp.companyName}</h3>
       <FontAwesomeIcon
         icon={faTrash}
         onClick={() => {

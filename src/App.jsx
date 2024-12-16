@@ -50,6 +50,13 @@ function App() {
     setExperience(experience.filter((exp) => exp.id !== id));
   };
 
+  const editExperience = (newExp) => {
+    setExperience([
+      ...experience.filter((exp) => exp.id !== newExp.id),
+      newExp,
+    ]);
+  };
+
   return (
     <>
       <h1 className="main-title">CV Builder</h1>
@@ -67,6 +74,7 @@ function App() {
         experience={experience}
         addExperienceFunc={addExperience}
         deleteExperienceFunc={deleteExperience}
+        editExperienceFunc={editExperience}
       />
     </>
   );
