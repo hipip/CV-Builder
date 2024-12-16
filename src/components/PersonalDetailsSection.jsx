@@ -20,7 +20,7 @@ export default function PersonalDetailsSection({
   return (
     <section id="personal-details-section" className="section">
       <button className="section-btn" onClick={toggleIsOpen}>
-        <FontAwesomeIcon icon={faUser} />
+        <FontAwesomeIcon icon={faUser} className="section-icon" />
         <h2 className="section-title">Personal Details</h2>
         <FontAwesomeIcon
           icon={isOpen ? faCaretUp : faCaretDown}

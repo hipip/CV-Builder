@@ -21,15 +21,20 @@ button {
   font-family: "Open Sans", sans-serif;
 }
 
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
 .section {
   display: flex;
   flex-direction: column;
   gap: 15px;
   align-items: flex-start;
   margin: 20px;
-  padding: 10px 40px;
+  padding: 5px 40px;
   border-radius: 30px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   min-width: 200px;
   background-color: white;
   height: fit-content;
@@ -53,6 +58,16 @@ button {
   align-items: stretch;
   gap: 20px;
   width: 100%;
+  animation: appear 0.4s ease forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .section-item:last-child {
@@ -91,14 +106,6 @@ button {
   margin-left: auto;
 }
 
-.education-item {
-  cursor: pointer;
-  border: none;
-  background-color: rgb(236, 236, 236);
-  padding: 10px;
-  border-radius: 30px;
-}
-
 .special-btn {
   margin: 15px 15px 20px 0;
   font-size: 1.1rem;
@@ -110,20 +117,32 @@ button {
 #cancel-edit-education-btn {
   background-color: crimson;
 }
-#add-education-btn {
+#add-education-btn,
+#add-experience-btn {
   background-color: black;
 }
 
 #add-educ-btn {
   background-color: #025bff;
 }
-#cancel-add-educ-btn {
+#cancel-add-educ-btn,
+#cancel-add-experience-btn {
   background-color: crimson;
 }
 
-.education-item {
+.education-item,
+.experience-item {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(236, 236, 236);
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.section-icon {
+  font-size: 1.5rem;
 }

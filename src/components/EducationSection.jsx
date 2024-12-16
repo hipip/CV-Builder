@@ -24,7 +24,7 @@ export default function EducationForm({
   return (
     <section id="education-section" className="section">
       <button className="section-btn" onClick={toggleIsOpen}>
-        <FontAwesomeIcon icon={faGraduationCap} />
+        <FontAwesomeIcon icon={faGraduationCap} className="section-icon" />
         <h2 className="section-title">Education</h2>
         <FontAwesomeIcon
           icon={isOpen ? faCaretUp : faCaretDown}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./styles/App.css";
 import PersonalDetailsSection from "./components/PersonalDetailsSection";
 import EducationSection from "./components/EducationSection";
+import ExperienceSection from "./components/ExperienceSection";
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -15,11 +16,12 @@ function App() {
 
   const [experience, setExperience] = useState([
     {
-      companyName: "",
-      role: "",
+      id: 0,
+      companyName: "Algebra Tec",
+      role: "Front-end Developer",
       startDate: "",
       endDate: "",
-      location: "",
+      location: "Jijel Algeria",
       description: "",
     },
   ]);
@@ -40,6 +42,14 @@ function App() {
     setEducation([...education.filter((e) => e.id !== newEduc.id), newEduc]);
   };
 
+  const addExperience = (newExp) => {
+    setExperience([...experience, { ...newExp, id: experience.length }]);
+  };
+
+  const deleteExperience = (id) => {
+    setExperience(experience.filter((exp) => exp.id !== id));
+  };
+
   return (
     <>
       <h1 className="main-title">CV Builder</h1>
@@ -52,6 +62,11 @@ function App() {
         addEducFunc={addEducation}
         deleteEducFunc={deleteEduc}
         editEducFunc={editEduc}
+      />
+      <ExperienceSection
+        experience={experience}
+        addExperienceFunc={addExperience}
+        deleteExperienceFunc={deleteExperience}
       />
     </>
   );
