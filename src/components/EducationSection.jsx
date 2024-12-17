@@ -41,7 +41,7 @@ export default function EducationForm({
               onClick={(e) => {
                 setMode("edit");
                 setToEdit(
-                  education.find((edu) => edu.id === +e.currentTarget.id)
+                  education.find((edu) => edu.id === e.currentTarget.id)
                 );
               }}
               deleteEduc={deleteEducFunc}

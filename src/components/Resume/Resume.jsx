@@ -49,7 +49,7 @@ export default function Resume({
         </h2>
         {education.map((edu, idx) => (
           <>
-            <ResumeEduItem edu={edu} idx={idx} color={color} />
+            <ResumeEduItem edu={edu} idx={idx} color={color} key={edu.id} />
             {idx !== education.length - 1 && (
               <hr
                 className="line-break"

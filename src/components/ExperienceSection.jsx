@@ -41,7 +41,9 @@ export default function ExperienceSection({
                 onClick={(e) => {
                   setMode("edit");
                   setToEdit(
-                    experience.find((expe) => expe.id === +e.currentTarget.id)
+                    experience.find(
+                      (expe) => expe.id === e.currentTarget.parentElement.id
+                    )
                   );
                 }}
                 deleteExperienceFunc={deleteExperienceFunc}

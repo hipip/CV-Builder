@@ -7,6 +7,7 @@ import Resume from "./components/Resume/Resume";
 import html2pdf from "html2pdf.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { nanoid } from "nanoid";
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -20,12 +21,14 @@ function App() {
 
   const [education, setEducation] = useState([
     {
+      id: nanoid(),
       school: "University Of Jijel",
       degree: "Bachelor's in Computer Science",
       startDate: "09/2019",
       endDate: "09/2022",
     },
     {
+      id: nanoid(),
       school: "University Of Jijel",
       degree: "Masters's in AI",
       startDate: "09/2024",
@@ -35,7 +38,7 @@ function App() {
 
   const [experience, setExperience] = useState([
     {
-      id: 0,
+      id: nanoid(),
       companyName: "fiverr",
       role: "front-end dev freelancer",
       startDate: 2020,
@@ -45,7 +48,7 @@ function App() {
         "Lorem ipsum dolor sit numquam, dolorem nostrum consequuntur minima odio expedita veritatis? Velit, asperiores. Blanditiis cupiditate deleniti, atque pariatur, neque obcaecati quos iusto aliquam recusandae saepe autem natus? Ipsa?",
     },
     {
-      id: 1,
+      id: nanoid(),
       companyName: "freelancer.org",
       role: "front-end dev",
       startDate: 2023,
@@ -63,7 +66,7 @@ function App() {
   };
 
   const addEducation = (newEduc) => {
-    setEducation([...education, { ...newEduc, id: education.length }]);
+    setEducation([...education, { ...newEduc, id: nanoid() }]);
   };
 
   const deleteEduc = (id) => {
@@ -75,7 +78,7 @@ function App() {
   };
 
   const addExperience = (newExp) => {
-    setExperience([...experience, { ...newExp, id: experience.length }]);
+    setExperience([...experience, { ...newExp, id: nanoid() }]);
   };
 
   const deleteExperience = (id) => {
