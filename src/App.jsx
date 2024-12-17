@@ -3,7 +3,7 @@ import "./styles/App.css";
 import PersonalDetailsSection from "./components/PersonalDetailsSection";
 import EducationSection from "./components/EducationSection";
 import ExperienceSection from "./components/ExperienceSection";
-import Resume from "./components/Resume";
+import Resume from "./components/Resume/Resume";
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -13,9 +13,24 @@ function App() {
     address: "Jijel, Jijel, Jijel, Algeria",
   });
 
-  const [education, setEducation] = useState([]);
+  const [education, setEducation] = useState([
+    {
+      school: "University Of Jijel",
+      degree: "Bachelor's in Computer Science",
+      startDate: "09/2019",
+      endDate: "09/2022",
+    },
+    {
+      school: "University Of Jijel",
+      degree: "Masters's in AI",
+      startDate: "09/2024",
+      endDate: "present",
+    },
+  ]);
 
   const [experience, setExperience] = useState([]);
+
+  const [mainColor, setMainColor] = useState("#0081bd");
 
   const handlePersonalDetailsChange = (e) => {
     setPersonalDetails({ ...personalDetails, [e.target.id]: e.target.value });
@@ -74,6 +89,7 @@ function App() {
           personalDetails={personalDetails}
           education={education}
           experience={experience}
+          color={mainColor}
         />
       </div>
     </>
