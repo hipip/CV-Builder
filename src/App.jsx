@@ -124,6 +124,15 @@ function App() {
             deleteExperienceFunc={deleteExperience}
             editExperienceFunc={editExperience}
           />
+          <div className="main-color-section">
+            <label htmlFor="main-color-inp">Main Color</label>
+            <input
+              type="color"
+              value={mainColor}
+              onChange={(e) => setMainColor(e.target.value)}
+              id="main-color-inp"
+            />
+          </div>
           <button
             className="special-btn"
             id="download-button"

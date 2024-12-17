@@ -313,3 +313,32 @@ button {
   left: 0;
   height: fit-content;
 }
+.main-color-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 30px;
+  gap: 20px;
+  font-weight: 700;
+}
+#main-color-inp {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
