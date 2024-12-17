@@ -11,6 +11,8 @@ function App() {
     email: "bt.youcef.dz@gmail.com",
     phoneNumber: "+213558642150",
     address: "Jijel, Jijel, Jijel, Algeria",
+    imgUrl:
+      "https://avatars.githubusercontent.com/u/112562455?s=400&u=11259509ad4f5238064ce4f3167208446975e927",
   });
 
   const [education, setEducation] = useState([
@@ -30,7 +32,7 @@ function App() {
 
   const [experience, setExperience] = useState([]);
 
-  const [mainColor, setMainColor] = useState("#0081bd");
+  const [mainColor, setMainColor] = useState("#1f0066");
 
   const handlePersonalDetailsChange = (e) => {
     setPersonalDetails({ ...personalDetails, [e.target.id]: e.target.value });

@@ -12,18 +12,36 @@ export default function Resume({
   experience,
   color,
 }) {
-  const { fullName, email, phoneNumber, address } = personalDetails;
+  const { fullName, email, phoneNumber, address, imgUrl } = personalDetails;
   return (
     <div id="resume">
       <div
         className="resume-personal-details"
         style={{ backgroundColor: color }}
       >
-        <p id="fullname">{fullName}</p>
-        <div className="another-container">
-          <PersonalDetailsItem value={email} iconName={faEnvelope} />
-          <PersonalDetailsItem value={phoneNumber} iconName={faPhone} />
-          <PersonalDetailsItem value={address} iconName={faLocationDot} />
+        <div
+          className="profile-pic"
+          style={{ backgroundImage: `url(${imgUrl})` }}
+        ></div>
+        <div>
+          <p id="fullname">{fullName}</p>
+          <div className="another-container">
+            <PersonalDetailsItem
+              value={email}
+              iconName={faEnvelope}
+              key="email"
+            />
+            <PersonalDetailsItem
+              value={phoneNumber}
+              iconName={faPhone}
+              key="phone-number"
+            />
+            <PersonalDetailsItem
+              value={address}
+              iconName={faLocationDot}
+              key="address"
+            />
+          </div>
         </div>
       </div>
       <div className="resume-education-section">
@@ -32,7 +50,7 @@ export default function Resume({
         </h2>
         {education.map((edu, idx) => (
           <>
-            <ResumeEduItem edu={edu} idx={idx} color={color} />
+            <ResumeEduItem edu={edu} idx={idx} color={color} key={edu.id} />
             {idx !== education.length - 1 && (
               <hr
                 className="resume-education-line-break"

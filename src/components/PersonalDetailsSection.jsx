@@ -58,6 +58,13 @@ export default function PersonalDetailsSection({
             value={personalDetails.address}
             onChange={handleChange}
           />
+          <SectionItem
+            htmlFor="imgUrl"
+            label="Profile Image Url"
+            placeHolder="Enter your image url"
+            value={personalDetails.imgUrl}
+            onChange={handleChange}
+          />
         </div>
       )}
     </section>
