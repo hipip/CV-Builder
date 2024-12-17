@@ -5,6 +5,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import PersonalDetailsItem from "./PersonalDetailsItem";
 import ResumeEduItem from "./ResumeEduItem";
+import React from "react";
+import ResumeExperienceItem from "./ResumeExperienceItem";
 
 export default function Resume({
   personalDetails,
@@ -50,10 +52,29 @@ export default function Resume({
         </h2>
         {education.map((edu, idx) => (
           <>
-            <ResumeEduItem edu={edu} idx={idx} color={color} key={edu.id} />
+            <ResumeEduItem edu={edu} idx={idx} color={color} />
             {idx !== education.length - 1 && (
               <hr
-                className="resume-education-line-break"
+                className="line-break"
+                style={{ backgroundColor: color }}
+              ></hr>
+            )}
+          </>
+        ))}
+      </div>
+      <div className="resume-experience-section">
+        <h2
+          className="resume-experience-section-title"
+          style={{ color: color }}
+        >
+          Experience
+        </h2>
+        {experience.map((exp, idx) => (
+          <>
+            <ResumeExperienceItem exp={exp} color={color} key={exp.id} />
+            {idx !== experience.length - 1 && (
+              <hr
+                className="line-break"
                 style={{ backgroundColor: color }}
               ></hr>
             )}

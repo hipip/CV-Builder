@@ -30,7 +30,28 @@ function App() {
     },
   ]);
 
-  const [experience, setExperience] = useState([]);
+  const [experience, setExperience] = useState([
+    {
+      id: 0,
+      companyName: "fiverr",
+      role: "front-end dev freelancer",
+      startDate: 2020,
+      endDate: 2023,
+      location: "cloud",
+      description:
+        "Lorem ipsum dolor sit numquam, dolorem nostrum consequuntur minima odio expedita veritatis? Velit, asperiores. Blanditiis cupiditate deleniti, atque pariatur, neque obcaecati quos iusto aliquam recusandae saepe autem natus? Ipsa?",
+    },
+    {
+      id: 1,
+      companyName: "freelancer.org",
+      role: "front-end dev",
+      startDate: 2023,
+      endDate: "present",
+      location: "cloud",
+      description:
+        "Lorem nostrum consequuntur minima odio expedita veritatis? Velit, asperiores. Blanditiis cupiditate deleniti, atque pariatur, neque obcaecati quos iusto aliquam recusandae saepe autem natus? Ipsa?",
+    },
+  ]);
 
   const [mainColor, setMainColor] = useState("#1f0066");
 
