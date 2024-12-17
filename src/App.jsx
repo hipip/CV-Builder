@@ -4,6 +4,9 @@ import PersonalDetailsSection from "./components/PersonalDetailsSection";
 import EducationSection from "./components/EducationSection";
 import ExperienceSection from "./components/ExperienceSection";
 import Resume from "./components/Resume/Resume";
+import html2pdf from "html2pdf.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -86,6 +89,17 @@ function App() {
     ]);
   };
 
+  const downloadPDF = () => {
+    var opt = {
+      margin: 0,
+      filename: "myfile.pdf",
+      image: { type: "jpg", quality: 1 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: "cm", format: "a4", orientation: "portrait" },
+    };
+    html2pdf().set(opt).from(document.querySelector("#resume")).save();
+  };
+
   return (
     <>
       <h1 className="main-title">CV Builder</h1>
@@ -107,6 +121,14 @@ function App() {
             deleteExperienceFunc={deleteExperience}
             editExperienceFunc={editExperience}
           />
+          <button
+            className="special-btn"
+            id="download-button"
+            onClick={downloadPDF}
+          >
+            <FontAwesomeIcon icon={faDownload} />
+            Download PDF
+          </button>
         </div>
         <Resume
           personalDetails={personalDetails}

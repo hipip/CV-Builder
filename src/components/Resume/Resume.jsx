@@ -21,10 +21,7 @@ export default function Resume({
         className="resume-personal-details"
         style={{ backgroundColor: color }}
       >
-        <div
-          className="profile-pic"
-          style={{ backgroundImage: `url(${imgUrl})` }}
-        ></div>
+        <img className="profile-pic" src={imgUrl} alt="a profile picture"></img>
         <div>
           <p id="fullname">{fullName}</p>
           <div className="another-container">
