@@ -85,8 +85,8 @@ export default function EducationForm({
             placeHolder="enter degree name"
             value={toEdit.degree}
             onChange={(e) => {
-              setToEdit({ ...toEdit, school: e.target.value });
-              editEducFunc({ ...toEdit, school: e.target.value });
+              setToEdit({ ...toEdit, degree: e.target.value });
+              editEducFunc({ ...toEdit, degree: e.target.value });
             }}
           />
           <SectionItem
@@ -95,8 +95,8 @@ export default function EducationForm({
             placeHolder="enter the starting date"
             value={toEdit.startDate}
             onChange={(e) => {
-              setToEdit({ ...toEdit, school: e.target.value });
-              editEducFunc({ ...toEdit, school: e.target.value });
+              setToEdit({ ...toEdit, startDate: e.target.value });
+              editEducFunc({ ...toEdit, startDate: e.target.value });
             }}
           />
           <SectionItem
@@ -105,8 +105,8 @@ export default function EducationForm({
             placeHolder="enter the end date"
             value={toEdit.endDate}
             onChange={(e) => {
-              setToEdit({ ...toEdit, school: e.target.value });
-              editEducFunc({ ...toEdit, school: e.target.value });
+              setToEdit({ ...toEdit, endDate: e.target.value });
+              editEducFunc({ ...toEdit, endDate: e.target.value });
             }}
           />
           <button
