@@ -200,12 +200,6 @@ button {
   background-color: yellow;
 }
 
-.sections-container {
-  position: sticky;
-  top: 0;
-  left: 0;
-  height: fit-content;
-}
 .main-color-section {
   display: flex;
   justify-content: flex-start;
