@@ -31,11 +31,13 @@ export default function Resume({
             <hr className="line-break" style={{ backgroundColor: color }}></hr>
           </div>
 
-          {education.map((edu, idx) => (
-            <>
-              <ResumeEduItem edu={edu} idx={idx} color={color} key={edu.id} />
-            </>
-          ))}
+          {education
+            .sort((a, b) => a.startDate - b.startDate)
+            .map((edu, idx) => (
+              <>
+                <ResumeEduItem edu={edu} idx={idx} color={color} key={edu.id} />
+              </>
+            ))}
         </div>
         <div className="resume-skills-section">
           <div>
@@ -85,11 +87,13 @@ export default function Resume({
           </h2>
           <hr className="line-break" style={{ backgroundColor: color }}></hr>
         </div>
-        {experience.map((exp) => (
-          <>
-            <ResumeExperienceItem exp={exp} color={color} key={exp.id} />
-          </>
-        ))}
+        {experience
+          .sort((a, b) => a.startDate - b.startDate)
+          .map((exp) => (
+            <>
+              <ResumeExperienceItem exp={exp} color={color} key={exp.id} />
+            </>
+          ))}
       </div>
     </div>
   );
