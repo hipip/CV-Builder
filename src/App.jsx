@@ -81,6 +81,11 @@ function App() {
       name: "Python",
       mastery: 70,
     },
+    {
+      id: nanoid(),
+      name: "React",
+      mastery: 40,
+    },
   ]);
 
   const [mainColor, setMainColor] = useState("#7f2633");
@@ -183,6 +188,7 @@ function App() {
           personalDetails={personalDetails}
           education={education}
           experience={experience}
+          skills={skills}
           color={mainColor}
         />
       </div>

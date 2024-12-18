@@ -7,32 +7,50 @@ import PersonalDetailsItem from "./PersonalDetailsItem";
 import ResumeEduItem from "./ResumeEduItem";
 import React from "react";
 import ResumeExperienceItem from "./ResumeExperienceItem";
+import ResumeSkillitem from "./ResumeSkillitem";
 
 export default function Resume({
   personalDetails,
   education,
   experience,
+  skills,
   color,
 }) {
   const { fullName, email, phoneNumber, address, imgUrl } = personalDetails;
   return (
     <div id="resume">
-      <div className="resume-education-section">
-        <div>
-          <h2
-            className="resume-education-section-title"
-            style={{ color: color }}
-          >
-            Education
-          </h2>
-          <hr className="line-break" style={{ backgroundColor: color }}></hr>
-        </div>
+      <div>
+        <div className="resume-education-section">
+          <div>
+            <h2
+              className="resume-education-section-title"
+              style={{ color: color }}
+            >
+              Education
+            </h2>
+            <hr className="line-break" style={{ backgroundColor: color }}></hr>
+          </div>
 
-        {education.map((edu, idx) => (
-          <>
-            <ResumeEduItem edu={edu} idx={idx} color={color} key={edu.id} />
-          </>
-        ))}
+          {education.map((edu, idx) => (
+            <>
+              <ResumeEduItem edu={edu} idx={idx} color={color} key={edu.id} />
+            </>
+          ))}
+        </div>
+        <div className="resume-skills-section">
+          <div>
+            <h2
+              className="resume-skills-section-title"
+              style={{ color: color }}
+            >
+              Skills
+            </h2>
+            <hr className="line-break" style={{ backgroundColor: color }}></hr>
+          </div>
+          {skills.map((skill) => (
+            <ResumeSkillitem skill={skill} key={skill.id} color={color} />
+          ))}
+        </div>
       </div>
       <div className="resume-personal-details-section">
         <img className="profile-pic" src={imgUrl} alt="a profile picture"></img>
