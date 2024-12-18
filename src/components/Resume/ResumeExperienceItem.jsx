@@ -5,7 +5,9 @@ export default function ResumeExperienceItem({ exp, color }) {
       <p className="resume-experience-date" style={{ color: color }}>
         {startDate} - {endDate}
       </p>
-      <p className="resume-experience-role">{role}</p>
+      <p className="resume-experience-role">
+        {role} @ {companyName}
+      </p>
 
       <p className="resume-experience--location">{location}</p>
 
