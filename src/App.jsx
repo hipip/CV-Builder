@@ -24,14 +24,14 @@ function App() {
       id: nanoid(),
       school: "University Of Jijel",
       degree: "Bachelor's in Computer Science",
-      startDate: "09/2019",
-      endDate: "09/2022",
+      startDate: "2019",
+      endDate: "2022",
     },
     {
       id: nanoid(),
       school: "University Of Jijel",
       degree: "Masters's in AI",
-      startDate: "09/2024",
+      startDate: "2024",
       endDate: "present",
     },
   ]);
@@ -45,7 +45,7 @@ function App() {
       endDate: 2023,
       location: "cloud",
       description:
-        "Lorem ipsum dolor sit numquam, dolorem nostrum consequuntur minima odio expedita veritatis? Velit, asperiores. Blanditiis cupiditate deleniti, atque pariatur, neque obcaecati quos iusto aliquam recusandae saepe autem natus? Ipsa?",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem excepturi dolorum hic dolorem eveniet. Odio consequuntur veniam quas accusamus quia.",
     },
     {
       id: nanoid(),
@@ -59,7 +59,7 @@ function App() {
     },
   ]);
 
-  const [mainColor, setMainColor] = useState("#1f0066");
+  const [mainColor, setMainColor] = useState("#7f2633");
 
   const handlePersonalDetailsChange = (e) => {
     setPersonalDetails({ ...personalDetails, [e.target.id]: e.target.value });
@@ -95,7 +95,7 @@ function App() {
   const downloadPDF = () => {
     var opt = {
       margin: 0,
-      filename: "myfile.pdf",
+      filename: `${personalDetails.fullName.split(" ").join("-")}-resume.pdf`,
       image: { type: "jpg", quality: 1 },
       html2canvas: { scale: 2, useCORS: true },
       jsPDF: { unit: "cm", format: "a4", orientation: "portrait" },

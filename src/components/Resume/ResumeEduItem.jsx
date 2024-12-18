@@ -5,7 +5,9 @@ export default function ResumeEduItem({ color, edu }) {
         {edu.startDate} - {edu.endDate}
       </p>
       <p className="resume-education-degree">{edu.degree}</p>
-      <p className="resume-education-school">{edu.school}</p>
+      <p className="resume-education-school">
+        <em>{edu.school}</em>
+      </p>
     </div>
   );
 }
