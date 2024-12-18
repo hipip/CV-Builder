@@ -8,6 +8,7 @@ import html2pdf from "html2pdf.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { nanoid } from "nanoid";
+import SkillsSection from "./components/SkillsSection";
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -59,6 +60,29 @@ function App() {
     },
   ]);
 
+  const [skills, setSkills] = useState([
+    {
+      id: nanoid(),
+      name: "HTML",
+      mastery: 100,
+    },
+    {
+      id: nanoid(),
+      name: "CSS",
+      mastery: 70,
+    },
+    {
+      id: nanoid(),
+      name: "JS",
+      mastery: 60,
+    },
+    {
+      id: nanoid(),
+      name: "Python",
+      mastery: 70,
+    },
+  ]);
+
   const [mainColor, setMainColor] = useState("#7f2633");
 
   const handlePersonalDetailsChange = (e) => {
@@ -92,6 +116,14 @@ function App() {
     ]);
   };
 
+  const addSkill = (newSkill) => {
+    setSkills([...skills, { ...newSkill, id: nanoid() }]);
+  };
+
+  const deleteSkill = (skillId) => {
+    setSkills(skills.filter((skill) => skill.id !== skillId));
+  };
+
   const downloadPDF = () => {
     var opt = {
       margin: 0,
@@ -123,6 +155,11 @@ function App() {
             addExperienceFunc={addExperience}
             deleteExperienceFunc={deleteExperience}
             editExperienceFunc={editExperience}
+          />
+          <SkillsSection
+            skills={skills}
+            deleteSkillFunc={deleteSkill}
+            addSkillFunc={addSkill}
           />
           <div className="main-color-section">
             <label htmlFor="main-color-inp">Main Color</label>

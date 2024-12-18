@@ -135,21 +135,25 @@ button {
   background-color: crimson;
 }
 #add-education-btn,
-#add-experience-btn {
+#add-experience-btn,
+#add-skill-btn {
   background-color: black;
 }
 
-#add-educ-btn {
+#add-educ-btn,
+#confirm-add-skill-btn {
   background-color: #025bff;
 }
 #cancel-add-educ-btn,
 #cancel-add-experience-btn,
-#return-to-education-btn {
+#return-to-education-btn,
+#cancel-add-skill-btn {
   background-color: crimson;
 }
 
 .education-item,
-.experience-item {
+.experience-item,
+.skill-item {
   display: flex;
   justify-content: center;
   align-items: center;
