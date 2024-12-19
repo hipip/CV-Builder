@@ -147,7 +147,8 @@ button {
 #cancel-add-educ-btn,
 #cancel-add-experience-btn,
 #return-to-education-btn,
-#cancel-add-skill-btn {
+#cancel-add-skill-btn,
+#return-to-skills-btn {
   background-color: crimson;
 }
 
@@ -186,7 +187,7 @@ button {
 }
 
 .sections-container {
-  flex: 1 1 0;
+  flex: 1 1 200px;
 }
 
 #resume {

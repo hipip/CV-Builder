@@ -129,6 +129,10 @@ function App() {
     setSkills(skills.filter((skill) => skill.id !== skillId));
   };
 
+  const editSkill = (newSkill) => {
+    setSkills([...skills.filter((s) => s.id !== newSkill.id), newSkill]);
+  };
+
   const downloadPDF = () => {
     var opt = {
       margin: 0,
@@ -165,6 +169,7 @@ function App() {
             skills={skills}
             deleteSkillFunc={deleteSkill}
             addSkillFunc={addSkill}
+            editSkillFunc={editSkill}
           />
           <div className="main-color-section">
             <label htmlFor="main-color-inp">Main Color</label>

@@ -7,14 +7,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import SkillItem from "./SkillItem";
 import AddSkill from "./AddSkill";
+import SectionItem from "./SectionItem";
 
 export default function SkillsSection({
   skills,
   deleteSkillFunc,
   addSkillFunc,
+  editSkillFunc,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [mode, setMode] = useState("normal");
+  const [toEdit, setToEdit] = useState(null);
 
   const toggleIsOpen = () => setIsOpen(!isOpen);
 
@@ -36,6 +39,10 @@ export default function SkillsSection({
                 skill={skill}
                 key={skill.id}
                 deleteSkillFunc={deleteSkillFunc}
+                setModeEdit={() => {
+                  setMode("edit");
+                  setToEdit(skills.find((sk) => sk.id === skill.id));
+                }}
               />
             ))}
             <button
@@ -54,6 +61,42 @@ export default function SkillsSection({
               addSkillFunc={addSkillFunc}
             />
           </div>
+        )}
+        {isOpen && mode === "edit" && (
+          <>
+            <h3>Edit Mode</h3>
+            <SectionItem
+              htmlFor="skill-name"
+              label="Skill Name"
+              placeHolder="enter the name of a technology or framework"
+              value={toEdit.name}
+              onChange={(e) => {
+                setToEdit({ ...toEdit, name: e.target.value });
+                editSkillFunc({ ...toEdit, name: e.target.value });
+              }}
+            />
+            <SectionItem
+              htmlFor="skill-mastery"
+              label="Skill Mastery"
+              placeHolder="enter a percentage of your mastery of the skill"
+              value={toEdit.mastery}
+              type="number"
+              onChange={(e) => {
+                setToEdit({ ...toEdit, mastery: e.target.value });
+                editSkillFunc({ ...toEdit, mastery: e.target.value });
+              }}
+            />
+            <button
+              className="special-btn"
+              id="return-to-skills-btn"
+              onClick={() => {
+                setMode("normal");
+                setToEdit(null);
+              }}
+            >
+              Save & Return
+            </button>
+          </>
         )}
       </section>
     </>

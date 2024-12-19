@@ -15,6 +15,7 @@ function SectionItem({
         value={value}
         onChange={onChange}
         placeholder={placeHolder}
+        {...(type === "number" && { min: "0", max: "100" })}
       />
     </div>
   );
