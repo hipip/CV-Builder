@@ -49,9 +49,11 @@ export default function Resume({
             </h2>
             <hr className="line-break" style={{ backgroundColor: color }}></hr>
           </div>
-          {skills.map((skill) => (
-            <ResumeSkillitem skill={skill} key={skill.id} color={color} />
-          ))}
+          {skills
+            .sort((a, b) => a.mastery - b.mastery)
+            .map((skill) => (
+              <ResumeSkillitem skill={skill} key={skill.id} color={color} />
+            ))}
         </div>
       </div>
       <div className="resume-personal-details-section">
