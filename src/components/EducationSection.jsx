@@ -94,6 +94,7 @@ export default function EducationForm({
             label="Start Date"
             placeHolder="enter the starting date"
             value={toEdit.startDate}
+            type="date"
             onChange={(e) => {
               setToEdit({ ...toEdit, startDate: e.target.value });
               editEducFunc({ ...toEdit, startDate: e.target.value });
@@ -102,6 +103,7 @@ export default function EducationForm({
           <SectionItem
             htmlFor="endDate"
             label="End Date"
+            type="date"
             placeHolder="enter the end date"
             value={toEdit.endDate}
             onChange={(e) => {

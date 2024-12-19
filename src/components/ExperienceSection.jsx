@@ -94,6 +94,7 @@ export default function ExperienceSection({
               label="Start Date"
               placeHolder="enter your start date"
               value={toEdit.startDate}
+              type="date"
               onChange={(e) => {
                 setToEdit({ ...toEdit, startDate: e.target.value });
                 editExperienceFunc({ ...toEdit, startDate: e.target.value });
@@ -103,6 +104,7 @@ export default function ExperienceSection({
               htmlFor="endDate"
               label="End Date"
               placeHolder="enter your end date"
+              type="date"
               value={toEdit.endDate}
               onChange={(e) => {
                 setToEdit({ ...toEdit, endDate: e.target.value });

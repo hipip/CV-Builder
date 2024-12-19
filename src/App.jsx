@@ -25,15 +25,15 @@ function App() {
       id: nanoid(),
       school: "University Of Jijel",
       degree: "Bachelor's in Computer Science",
-      startDate: "2019",
-      endDate: "2022",
+      startDate: "2019-09-01",
+      endDate: "2022-09-01",
     },
     {
       id: nanoid(),
       school: "University Of Jijel",
       degree: "Masters's in AI",
-      startDate: "2024",
-      endDate: "present",
+      startDate: "2024-08-01",
+      endDate: "2025-09-01",
     },
   ]);
 
@@ -42,8 +42,8 @@ function App() {
       id: nanoid(),
       companyName: "fiverr",
       role: "front-end dev freelancer",
-      startDate: 2020,
-      endDate: 2023,
+      startDate: "2020-09-01",
+      endDate: "2023-09-01",
       location: "cloud",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem excepturi dolorum hic dolorem eveniet. Odio consequuntur veniam quas accusamus quia.",
@@ -52,8 +52,8 @@ function App() {
       id: nanoid(),
       companyName: "freelancer.org",
       role: "front-end dev",
-      startDate: 2023,
-      endDate: "present",
+      startDate: "2023-09-01",
+      endDate: "2024-09-01",
       location: "cloud",
       description:
         "Lorem nostrum consequuntur minima odio expedita veritatis? Velit, asperiores. Blanditiis cupiditate deleniti, atque pariatur, neque obcaecati quos iusto aliquam recusandae saepe autem natus? Ipsa?",

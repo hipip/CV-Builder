@@ -15,6 +15,7 @@ export default function ExperienceItem({
         onClick={() => {
           deleteExperienceFunc(id);
         }}
+        className="delete-item-btn"
       />
     </button>
   );

@@ -157,12 +157,17 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   cursor: pointer;
   border: none;
   background-color: rgb(236, 236, 236);
   padding: 10px;
   border-radius: 30px;
+}
+
+.experience-item h3,
+.education-item h3,
+.skill-item h3 {
+  margin-left: auto;
 }
 
 .section-icon {
@@ -268,8 +273,8 @@ input[type="color"]::-webkit-color-swatch-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
 }
 
 .personal-details-item {
@@ -331,4 +336,9 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 
 .resume-skill-mastery {
   height: 20px;
+}
+
+.delete-item-btn {
+  margin-left: auto;
+  margin-right: 10px;
 }

@@ -7,7 +7,11 @@ export default function EducationItem({ educ, id, onClick, deleteEduc }) {
       <h3 onClick={onClick} id={id}>
         {educ.school} {educ.startDate}
       </h3>
-      <FontAwesomeIcon icon={faTrash} onClick={() => deleteEduc(id)} />
+      <FontAwesomeIcon
+        icon={faTrash}
+        onClick={() => deleteEduc(id)}
+        className="delete-item-btn"
+      />
     </button>
   );
 }

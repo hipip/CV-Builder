@@ -32,7 +32,7 @@ export default function Resume({
           </div>
 
           {education
-            .sort((a, b) => a.startDate - b.startDate)
+            .sort((a, b) => new Date(a.startDate) - new Date(b.startDate))
             .map((edu, idx) => (
               <>
                 <ResumeEduItem edu={edu} idx={idx} color={color} key={edu.id} />
@@ -88,7 +88,7 @@ export default function Resume({
           <hr className="line-break" style={{ backgroundColor: color }}></hr>
         </div>
         {experience
-          .sort((a, b) => a.startDate - b.startDate)
+          .sort((a, b) => new Date(a.startDate) - new Date(b.startDate))
           .map((exp) => (
             <>
               <ResumeExperienceItem exp={exp} color={color} key={exp.id} />

@@ -10,6 +10,7 @@ export default function SkillItem({ skill, deleteSkillFunc }) {
       <FontAwesomeIcon
         icon={faTrash}
         onClick={() => deleteSkillFunc(skill.id)}
+        className="delete-item-btn"
       />
     </div>
   );
